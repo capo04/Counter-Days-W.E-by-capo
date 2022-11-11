@@ -1,0 +1,34 @@
+'use strict';
+
+export function update(value) {
+	let time = new Date();
+	var dayVar = new Array(7);
+	dayVar[0] = "Sunday";
+	dayVar[1] = "Monday";
+	dayVar[2] = "Tuesday";
+	dayVar[3] = "Wednesday";
+	dayVar[4] = "Thursday";
+	dayVar[5] = "Friday";
+	dayVar[6] = "Saturday" ;
+
+	let dayText = dayVar[time.getDay()];
+	let dateVar = (time.getDate());
+	var monthVar = new Array(12);
+	monthVar[0] = "January";
+	monthVar[1] = "February";
+	monthVar[2] = "March";
+	monthVar[3] = "April";
+	monthVar[4] = "May";
+	monthVar[5] = "June";
+	monthVar[6] = "July";
+	monthVar[7] = "August";
+	monthVar[8] = "September";
+	monthVar[9] = "October";
+	monthVar[10] = "November";
+	monthVar[11] = "December";
+
+	var monthText = monthVar[time.getMonth()];
+	let yearVar = (time.getFullYear());
+	value = dayText + "," + " " + dateVar + " " + monthText + " " + yearVar
+	return value;
+}
